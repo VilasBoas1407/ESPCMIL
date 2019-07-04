@@ -117,10 +117,10 @@
             <div class="owl-carousel testimonials-carousel wow fadeInUp">
 
               @foreach($exercicios as $exercicio)
-              <div class="testimonial-item col-md-12">
+              <div class="testimonial-item col-md-12 col-lg-8">
                 <div style="width: 50%; height: 50%; position: relative; top:50%; left:53%;">
                 <form action=".../{{$exercicio['id_questoes']}}" method="post" style="margin-left: -180px;"><center>
-                <h3><p style="word-wrap: break-word;white-space: normal;">{{$exercicio['enunciado']}}</p></h3>
+                <h3 style="word-wrap: break-word;white-space: normal;">{{$exercicio['enunciado']}}</h3><br>
                 @if(session()->has($exercicio['id_questoes']))
                   <input type="hidden" name="idQuestao" value="{{ $exercicio['id_questoes'] }}" disabled="">
                   <input style="word-wrap: break-word;" type="radio" class="form-check-input" name="resposta" value="alternativa_a" disabled="">{{$exercicio['alternativa_a']}}</input><br><br>
